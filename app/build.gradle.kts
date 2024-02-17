@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -67,10 +68,13 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.8.9")
+    //picasso
+    implementation("com.squareup.picasso:picasso:2.71828")
+    //coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
     //glide
     implementation("com.github.bumptech.glide:glide:4.12.0")
-    //lottie
-    implementation("com.airbnb.android:lottie:6.0.0")
-    //gift
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.23")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
+
+
 }

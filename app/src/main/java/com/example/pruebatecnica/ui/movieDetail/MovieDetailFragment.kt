@@ -1,4 +1,4 @@
-package com.example.pruebatecnica.ui.movieDetailFragment
+package com.example.pruebatecnica.ui.movieDetail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
