@@ -1,6 +1,8 @@
 package com.example.pruebatecnica.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class MovieListModel(
     @SerializedName("id")
@@ -18,4 +20,4 @@ data class MovieListModel(
     @SerializedName("overview")
     val overview: String
 
-)
+): Serializable

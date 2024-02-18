@@ -13,18 +13,19 @@ import com.example.pruebatecnica.model.MovieListModel
 
 class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val binding = ItemMovieBinding.bind(itemView)
-    private val context: Context = itemView.context
-
+    private val binding = ItemMovieBinding.bind(itemView)
     fun render(movieListModel: MovieListModel,
                onClickListener: (MovieListModel) -> Unit) {
 
-
-        Glide.with(context)
+        Glide.with(binding.imageMoviePoster.context)
             .load("${Constant.BASE_URL_IMAGE}${movieListModel.posterPath}")
             // .apply(RequestOptions().override(Constant.IMAGE_ANCHO, Constant.IMAGE_ALTO))
             .into(binding.imageMoviePoster)
         binding.textMovieTitle.text = movieListModel.title
+
+        itemView.setOnClickListener {
+            onClickListener(movieListModel)
+        }
 
     }
 }

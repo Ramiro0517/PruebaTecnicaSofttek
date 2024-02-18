@@ -17,8 +17,12 @@ class MovieListViewModel: ViewModel() {
     private var _listaPeliculas = MutableLiveData<List<MovieListModel>>()
     val listaPeliculas : LiveData<List<MovieListModel>> = _listaPeliculas
 
+    private var _progress = MutableLiveData<Boolean>()
+    val progress : LiveData<Boolean> = _progress
+
     fun getMovie(){
         viewModelScope.launch(Dispatchers.IO) {
+            _progress.postValue(true)
             val response = RetrofitClient.apiService.getUpcomingMovies(1,Constant.API_KEY)
             withContext(Dispatchers.Main){
                 if(response.isSuccessful){
@@ -28,15 +32,8 @@ class MovieListViewModel: ViewModel() {
                     _listaPeliculas.value = emptyList()
                 }
             }
+            _progress.postValue(false)
 
         }
     }
-
-    fun onMovieClick(movieListModel: MovieListModel) {
-
-        Toast.makeText(null, "Movie clicked", Toast.LENGTH_SHORT).show()
-
-    }
-
-
 }

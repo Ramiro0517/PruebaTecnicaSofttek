@@ -13,10 +13,10 @@ import com.example.pruebatecnica.R
 import com.example.pruebatecnica.core.Constant
 import com.example.pruebatecnica.model.MovieListModel
 
-class MovieListAdapter(private val context : Context, var listMovie : List<MovieListModel>, private val onClickListener:(MovieListModel)->Unit) : RecyclerView.Adapter<MovieListViewHolder>() {
+class MovieListAdapter( var listMovie : List<MovieListModel>, private val onClickListener:(MovieListModel)->Unit) : RecyclerView.Adapter<MovieListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_movie, parent, false)
         return MovieListViewHolder(view)
     }
 
