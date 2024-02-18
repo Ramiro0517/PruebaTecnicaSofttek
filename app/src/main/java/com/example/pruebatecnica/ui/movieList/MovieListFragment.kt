@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pruebatecnica.R
 import com.example.pruebatecnica.databinding.FragmentMovieListBinding
-import com.example.pruebatecnica.model.MovieListModel
+import com.example.pruebatecnica.data.model.MovieListModel
 import com.example.pruebatecnica.ui.movieList.adapter.MovieListAdapter
 import com.example.pruebatecnica.viewmodels.MovieListViewModel
 

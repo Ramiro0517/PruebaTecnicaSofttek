@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pruebatecnica.core.Constant
 import com.example.pruebatecnica.databinding.ItemMovieBinding
-import com.example.pruebatecnica.model.MovieListModel
+import com.example.pruebatecnica.data.model.MovieListModel
 
 class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

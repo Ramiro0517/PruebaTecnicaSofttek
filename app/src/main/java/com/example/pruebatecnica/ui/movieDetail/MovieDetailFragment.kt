@@ -10,7 +10,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.pruebatecnica.R
 import com.example.pruebatecnica.core.Constant
 import com.example.pruebatecnica.databinding.FragmentMovieDetailBinding
-import com.example.pruebatecnica.model.MovieListModel
+import com.example.pruebatecnica.data.model.MovieListModel
 
 
 class MovieDetailFragment : Fragment() {

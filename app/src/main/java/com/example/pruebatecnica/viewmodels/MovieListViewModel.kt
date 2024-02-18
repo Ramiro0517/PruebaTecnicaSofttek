@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pruebatecnica.core.Constant
-import com.example.pruebatecnica.model.MovieListModel
+import com.example.pruebatecnica.data.model.MovieListModel
 import com.example.pruebatecnica.network.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
