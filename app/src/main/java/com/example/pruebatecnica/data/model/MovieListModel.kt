@@ -4,6 +4,7 @@ import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.pruebatecnica.network.response.MovieListResponse
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
@@ -51,4 +52,22 @@ data class MovieListModelEntity(
     @SerializedName("overview")
     val overview: String
 
+)
+
+fun List<MovieListModelEntity>.toMovieListModel(): MovieListResponse {
+    val resultList = mutableListOf<MovieListModel>()
+    this.forEach {
+        resultList.add(it.toMovieListModel())
+    }
+    return MovieListResponse(resultList)
+}
+
+fun MovieListModelEntity.toMovieListModel(): MovieListModel = MovieListModel(
+    this.id,
+    this.originalTitle,
+    this.posterPath,
+    this.title,
+    this.voteAverage,
+    this.releaseDate,
+    this.overview
 )

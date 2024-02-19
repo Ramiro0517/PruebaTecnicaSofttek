@@ -1,7 +1,8 @@
-package com.example.pruebatecnica
+package com.example.pruebatecnica.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pruebatecnica.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
