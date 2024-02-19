@@ -71,3 +71,14 @@ fun MovieListModelEntity.toMovieListModel(): MovieListModel = MovieListModel(
     this.releaseDate,
     this.overview
 )
+
+
+fun MovieListModel.toMovieListModelEntity(): MovieListModelEntity = MovieListModelEntity(
+    this.id,
+    this.originalTitle,
+    this.posterPath,
+    this.title,
+    this.voteAverage,
+    this.releaseDate,
+    this.overview
+)
